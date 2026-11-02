@@ -18,7 +18,7 @@ export const NAV_LINKS = [
 // The app's onboarding says "데이터는 기기에만 저장돼요", which backs the last line.
 export const PROMISES: { icon: LucideIcon; text: string }[] = [
   { icon: LockKeyhole, text: "내가 고른 앱과 웹사이트만" },
-  { icon: ShieldCheck, text: "계정도, 서버 전송도 없이" },
+  { icon: ShieldCheck, text: "계정 없이, 서버 없이" },
   { icon: Smartphone, text: "내 iPhone 안에서만" },
 ]
 
@@ -26,7 +26,7 @@ export type Step = { title: string; description: string }
 
 export const STEPS: Step[] = [
   {
-    title: "스크린 타임 접근 허용",
+    title: "스크린 타임 권한 허용하기",
     description:
       "앱을 제한하고 사용 보고서를 보여 주려면 iPhone의 스크린 타임 권한이 필요해요.",
   },
@@ -36,7 +36,7 @@ export const STEPS: Step[] = [
       "공부할 때 자꾸 손이 가는 앱과 웹사이트를 직접 골라요. 고른 것만 잠가요.",
   },
   {
-    title: "집중 시간을 정하고 시작",
+    title: "집중 시간을 정하고 시작하기",
     description:
       "25분부터 50분까지 5분 단위로 정하고 시작해요. 설정에서 언제든 바꿀 수 있어요.",
   },
@@ -61,21 +61,21 @@ export const FEATURES: Feature[] = [
     key: "break",
     label: "짧게 쉬기",
     headline: ["잠깐 쉬어도,", "흐름은 그대로."],
-    body: "한 번의 집중에서 3분씩 최대 3번 쉴 수 있어요. 대기 화면을 거쳐야 쉴 수 있고, 쉬는 동안에는 타이머가 멈추고 제한이 잠깐 풀려요.",
+    body: "한 번의 집중에서 3분씩 최대 3번 쉴 수 있어요. 쉬는 시간은 짧은 대기 화면 뒤에 시작되고, 쉬는 동안에는 타이머가 멈추고 제한이 잠깐 풀려요.",
     note: "무작정 참기보다, 다시 돌아올 수 있게.",
   },
   {
     key: "everyday",
     label: "매일 제한",
     headline: ["매일 같은 시간,", "따로 신경 쓰지 않도록."],
-    body: "학교 시간처럼 매일 반복되는 시간대에 따로 고른 앱을 막아요. 점심시간 같은 짧은 해제 구간을 몇 개 둘 수 있어요.",
+    body: "학교 시간처럼 매일 반복되는 시간대에 따로 고른 앱을 막아요. 점심시간처럼 제한을 잠시 풀어 둘 시간도 3개까지 정할 수 있어요.",
     note: "앱을 열지 않아도 매일 적용돼요.",
   },
   {
     key: "focusMode",
     label: "집중 모드와 함께",
     headline: ["집중 모드를 켜면,", "온:공도 함께."],
-    body: "iOS에서 “공부” 같은 집중 모드를 켜면 집중이 시작되고, 알림은 그 집중 모드 설정대로 걸러져요.",
+    body: "iOS에서 “공부” 같은 집중 모드를 켜면 집중이 시작돼요. 알림은 그 집중 모드에 설정한 대로 iOS가 걸러 줘요.",
     note: "그렇게 시작한 집중은 집중 모드를 끄면 끝나요.",
   },
   {

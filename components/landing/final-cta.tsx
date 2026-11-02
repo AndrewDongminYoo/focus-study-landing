@@ -18,8 +18,8 @@ export function FinalCta() {
         출시되면 가장 먼저 알려 드릴게요.
       </h2>
       <p className="max-w-md leading-relaxed text-pretty text-muted-foreground">
-        온전히 공부하는 시간, 온:공과 함께해요. 버튼을 누르면 메일 앱에서 출시
-        알림 신청 메일이 열려요.
+        버튼을 누르면 메일 앱이 열려요. 그대로 보내면 출시할 때 메일로 알려
+        드릴게요.
       </p>
       <Button asChild size="lg" className="h-12 px-6 text-base">
         <a href={NOTIFY_HREF}>

@@ -17,7 +17,7 @@ const pretendard = localFont({
 export const metadata: Metadata = {
   title: "온:공 · 공부할 땐, 온전히 공부만",
   description:
-    "집중하는 동안 방해되는 앱과 웹사이트를 잠가 두는 iPhone 집중 타이머예요. 계정과 서버 없이 동작해요.",
+    "집중하는 동안 방해되는 앱과 웹사이트를 잠가 두는 iPhone 집중 타이머예요. 계정 없이 쓰고, 고른 앱과 사용량을 서버로 보내지 않아요.",
   icons: hasAppIcon ? { icon: APP_ICON_SRC, apple: APP_ICON_SRC } : undefined,
 }
 
