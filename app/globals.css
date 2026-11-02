@@ -9,7 +9,7 @@
  * Everything below maps CSS variables to Tailwind utilities (bg-primary, text-muted-foreground, ...).
  */
 @theme inline {
-  --font-sans: var(--font-geist-sans);
+  --font-sans: var(--font-pretendard);
   --font-mono: var(--font-geist-mono);
   --font-heading: var(--font-heading-family, var(--font-geist-sans));
 
