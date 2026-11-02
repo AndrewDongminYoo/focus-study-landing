@@ -1,6 +1,7 @@
 import { existsSync } from "node:fs"
 import { join } from "node:path"
 
+export const SITE_URL = "https://focus.donminzzi.kr"
 export const CONTACT_EMAIL = "ydm2790@gmail.com"
 export const NOTIFY_HREF = `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent("온:공 출시 알림 신청")}`
 export const SIBLING_APP = {

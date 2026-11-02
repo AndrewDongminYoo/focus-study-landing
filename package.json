@@ -1,5 +1,5 @@
 {
-  "name": "page-gen",
+  "name": "focus-study-landing",
   "version": "0.0.1",
   "type": "module",
   "private": true,
@@ -12,6 +12,7 @@
     "format": "prettier --write \"**/*.{ts,tsx}\"",
     "typecheck": "tsc --noEmit",
     "lint:design": "node scripts/design-lint.mjs",
+    "og": "node scripts/og-image.mjs",
     "check": "pnpm typecheck && pnpm lint:design && pnpm lint",
     "shot": "node scripts/screenshot.mjs",
     "prune:apply": "node scripts/prune.mjs --apply",

@@ -4,8 +4,12 @@ import { SiteFooter } from "@/components/landing/site-footer"
 import { SiteHeader } from "@/components/landing/site-header"
 import { CONTACT_EMAIL, STUDIO } from "@/lib/site"
 
+// No page-level openGraph: it would replace the root one, and the build then
+// drops og:image from this page. Shares of /privacy use the site card.
 export const metadata: Metadata = {
   title: "개인정보처리방침 · 온:공",
+  description:
+    "온:공은 계정이 없고, 고른 앱 목록과 사용량을 서버로 보내지 않아요. iPhone 안에 저장하는 정보와 권한을 안내해요.",
 }
 
 // Every statement below traces to the focus-study repository on 2026-11-02:
