@@ -6,7 +6,7 @@ They must understand what the app blocks and what it does not block, and leave w
 Tone: calm, tidy, honest; reference feel: a quiet study desk, editorial and airy, the timer numerals as the typographic hero.
 Copy is 해요체, with no exaggeration and no scolding ("폰 중독 탈출!" is out).
 
-Brand hue: amber, fixed by the operator. Light `#A85F10` = `oklch(0.5581 0.1255 59.86)`, dark `#F4A646` = `oklch(0.7848 0.1425 68.29)`.
+Brand hue: amber, fixed. Light `#A85F10` = `oklch(0.5581 0.1255 59.86)`, dark `#F4A646` = `oklch(0.7848 0.1425 68.29)`.
 It is the warm lamp on a dark desk, and it is the dot in the app icon.
 Neutrals come from the icon: navy `#1E2744` = `oklch(0.2799 0.0551 269.56)` and cream `#FFF4E2` = `oklch(0.9710 0.0265 80.25)`.
 Light mode is navy text on cream; dark mode is cream text on navy, the same pair as the icon.
@@ -37,21 +37,19 @@ Sections:
 7. FAQ: `Accordion`, five questions, answers verbatim from the request.
 
 Section headings (how it works, features, privacy, FAQ) are a small label that matches the navigation link, then a headline, then a lead sentence (`SectionHeading`).
-Revised on 2026-11-02 after comparing with a v0.dev build of the same prompt: the headlines, feature notes, promise strip, step illustrations, hero line break and caption, footer wordmark, and the flat offset phone shadow (`--phone-shadow`) came from that comparison. The v0 feature cards were not adopted because they show controls the app does not have (a weekday picker).
-8. Final CTA: `AppIcon`, "출시되면 가장 먼저 알려 드릴게요.", `Button`.
-9. Footer: `AppIcon` + "온:공" + "나의 하루에, 온전히.", donminzzi lab, 온음(WarmWake) link, 개인정보처리방침 (`/privacy`), contact email, © donminzzi lab.
+Revised on 2026-11-02 after comparing with a v0.dev build of the same prompt: the headlines, feature notes, promise strip, step illustrations, hero line break and caption, footer wordmark, and the flat offset phone shadow (`--phone-shadow`) came from that comparison. The v0 feature cards were not adopted because they show controls the app does not have (a weekday picker). 8. Final CTA: `AppIcon`, "출시되면 가장 먼저 알려 드릴게요.", `Button`. 9. Footer: `AppIcon` + "온:공" + "나의 하루에, 온전히.", donminzzi lab, 온음(WarmWake) link, 개인정보처리방침 (`/privacy`), contact email, © donminzzi lab.
 
 Phone screens: the screen subtree is wrapped in `.dark` so it always renders navy + cream + dark amber, like the icon, in both page themes.
 `PhoneFrame` takes either `src` (a future 1179×2556 screenshot, `aspect-[1179/2556]`) or children (the reconstructed UI), so a real screenshot can replace the mock later.
-Mock strings follow the shipped app (`focus-study/App/FocusView.swift`, `TodayHistoryView.swift`), except the hero buttons, which use the operator's "쉬기" / "집중 종료".
+Mock strings follow the shipped app (`focus-study/App/FocusView.swift`, `TodayHistoryView.swift`), except the hero buttons, which use the requested "쉬기" / "집중 종료".
 
 States: the page has no data regions. The App Store badge has one state, disabled "곧 출시".
 Copy language: ko.
 
 Assets and decisions to confirm:
 
-- `public/icon.png` is the operator's app icon. All icon uses go through `components/brand/app-icon.tsx`, which renders a labelled placeholder if the file is missing; the favicon is wired the same way.
+- `public/icon.png` is the app icon. All icon uses go through `components/brand/app-icon.tsx`, which renders a labelled placeholder if the file is missing; the favicon is wired the same way.
 - Contact email `ydm2790@gmail.com` (from the prep-book-landing footer), kept in one constant in `lib/site.ts`.
 - 온음(WarmWake) URL `https://warmwake.donminzzi.kr` (from the warm_alarm README).
-- `/privacy` is a short interim page that states only the facts in the request; it needs the operator's review before launch.
+- `/privacy` is a short interim page that states only the facts in the request; it needs the user's review before launch.
 - No user counts, ratings or improvement figures anywhere.
