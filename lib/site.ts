@@ -10,7 +10,7 @@ export const SIBLING_APP = {
 }
 export const STUDIO = "donminzzi lab"
 
-// The app icon is supplied by the operator as public/icon.png.
+// The app icon is supplied as public/icon.png.
 // Until that file exists, the brand components render a labelled placeholder
 // instead of a broken image.
 export const APP_ICON_SRC = "/icon.png"

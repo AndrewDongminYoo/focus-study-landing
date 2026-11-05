@@ -13,7 +13,9 @@ import { readFileSync } from "node:fs"
 import { chromium } from "@playwright/test"
 
 const OUT = "app/opengraph-image.png"
-const font = readFileSync("app/fonts/PretendardVariable.woff2").toString("base64")
+const font = readFileSync("app/fonts/PretendardVariable.woff2").toString(
+  "base64"
+)
 
 // The fixed brand values from app/tokens.css (navy, cream, dark-mode amber)
 // and the dark-mode muted text color.
@@ -72,10 +74,14 @@ const page = await browser.newPage({
 })
 await page.setContent(html)
 await page.evaluate(() => document.fonts.ready)
-const loaded = await page.evaluate(() => document.fonts.check("650 78px Pretendard"))
+const loaded = await page.evaluate(() =>
+  document.fonts.check("650 78px Pretendard")
+)
 if (!loaded) {
   await browser.close()
-  console.error("Pretendard did not load; the card would fall back to a system font.")
+  console.error(
+    "Pretendard did not load; the card would fall back to a system font."
+  )
   process.exit(1)
 }
 await page.screenshot({ path: OUT })
